@@ -1,0 +1,26 @@
+{
+  "name": "minimap-pigments",
+  "main": "./lib/minimap-pigments",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "repository": "https://github.com/atom/minimap-pigments",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "consumedServices": {
+    "minimap": {
+      "versions": {
+        "1.0.0": "consumeMinimapServiceV1"
+      }
+    },
+    "pigments.api": {
+      "versions": {
+        "1.0.0": "consumePigmentsServiceV1"
+      }
+    }
+  },
+  "dependencies": {
+    "event-kit": ">= 0.7.2"
+  }
+}
