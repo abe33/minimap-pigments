@@ -72,8 +72,18 @@ describe "MinimapPigments", ->
         spyOn(minimap, 'removeAllDecorationsForMarker').andCallThrough()
 
         editBuffer('', start: [2,0], end: [2, Infinity])
-        
+
         waitsFor -> minimap.removeAllDecorationsForMarker.callCount > 0
 
       it 'removes the minimap decoration', ->
         expect(minimap.removeAllDecorationsForMarker.callCount).toEqual(1)
+
+    describe 'when the editor is destroyed', ->
+      beforeEach ->
+        spyOn(binding, 'destroy').andCallThrough()
+        editor.destroy()
+
+      it 'also destroy the binding model', ->
+        expect(binding.destroy).toHaveBeenCalled()
+
+        expect(plugin.bindingForEditor(editor)).toBeUndefined()
