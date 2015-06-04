@@ -3,7 +3,7 @@
   "main": "./lib/minimap-pigments",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "repository": "https://github.com/atom/minimap-pigments",
+  "repository": "https://github.com/abe33/minimap-pigments",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
