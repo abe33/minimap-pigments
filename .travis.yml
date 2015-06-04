@@ -8,4 +8,4 @@ notifications:
 env:
   - APM_TEST_PACKAGES="pigments"
 
-script: 'curl -s https://raw.githubusercontent.com/fundon/atom-minimap/master/ci/build-package.sh | sh'
+script: 'curl -s https://raw.githubusercontent.com/abe33/minimap-pigments/master/ci/build-package.sh | sh'
