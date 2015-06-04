@@ -13,8 +13,6 @@ class MinimapPigmentsBinding
   updateMarkers: ->
     markers = @colorBuffer.findValidColorMarkers()
 
-    console.log @displayedMarkers, markers
-
     for m in @displayedMarkers when m not in markers
       @minimap.removeAllDecorationsForMarker(m.marker)
 
