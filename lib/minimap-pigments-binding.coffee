@@ -8,7 +8,11 @@ class MinimapPigmentsBinding
 
     @colorBuffer.initialize().then => @updateMarkers()
 
-    @subscriptions.add @colorBuffer.onDidUpdateColorMarkers => @updateMarkers()
+    @subscriptions.add @colorBuffer.editor.displayBuffer.onDidTokenize =>
+      @updateMarkers()
+    @subscriptions.add @colorBuffer.onDidUpdateColorMarkers =>
+      @updateMarkers()
+
     @decorations = []
 
   updateMarkers: ->
