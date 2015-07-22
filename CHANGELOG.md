@@ -1,3 +1,10 @@
+<a name="v0.1.2"></a>
+# v0.1.2 (2015-07-22)
+
+## :bug: Bug Fixes
+
+- Fix decorations not destroyed on deactivation ([0c484598](https://github.com/abe33/minimap-pigments/commit/0c4845986cbd336ed982a2f266b7dd3d4285daab))
+
 <a name="v0.1.1"></a>
 # v0.1.1 (2015-06-09)
 
