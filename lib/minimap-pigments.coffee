@@ -14,11 +14,16 @@ module.exports =
     @minimap.registerPlugin 'pigments', this
 
   consumePigmentsServiceV1: (@pigments) ->
+    @subscriptions.add @pigments.getProject().onDidDestroy => @pigments = null
+
     @initialize() if @minimap? and @active
 
   deactivate: ->
+    @subscriptions.dispose()
+    @editorsSubscription.dispose()
     @minimap.unregisterPlugin 'pigments'
     @minimap = null
+    @pigments = null
 
   activatePlugin: ->
     return if @active
@@ -52,4 +57,3 @@ module.exports =
 
     @active = false
     @editorsSubscription?.dispose()
-    @subscriptions.dispose()
