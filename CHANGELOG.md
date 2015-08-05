@@ -1,3 +1,10 @@
+<a name="v0.1.3"></a>
+# v0.1.3 (2015-08-05)
+
+## :bug: Bug Fixes
+
+- Fix persisting reference to pigments after package deactivation ([5f134ece](https://github.com/abe33/minimap-pigments/commit/5f134ece622768bdbf2ee503a53609dd0bc8c55f), [abe33/atom-pigments#66](https://github.com/abe33/atom-pigments/issues/66))
+
 <a name="v0.1.2"></a>
 # v0.1.2 (2015-07-22)
 
