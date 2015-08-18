@@ -3,11 +3,12 @@ MinimapPigmentsBinding = require './minimap-pigments-binding'
 
 module.exports =
   active: false
-  bindings: {}
 
   isActive: -> @active
 
   activate: (state) ->
+    @bindingsById = {}
+    @subscriptionsById = {}
     @subscriptions = new CompositeDisposable
 
   consumeMinimapServiceV1: (@minimap) ->
@@ -38,22 +39,21 @@ module.exports =
       minimap = @minimap.minimapForEditor(editor)
 
       binding = new MinimapPigmentsBinding({editor, minimap, colorBuffer})
-      @bindings[editor.id] = binding
+      @bindingsById[editor.id] = binding
 
-      subscription = editor.onDidDestroy =>
+      @subscriptionsById[editor.id] = editor.onDidDestroy =>
+        @subscriptionsById[editor.id].dispose()
         binding.destroy()
-        delete @bindings[editor.id]
-        subscription.dispose()
+        delete @subscriptionsById[editor.id]
+        delete @bindingsById[editor.id]
 
   bindingForEditor: (editor) ->
-    return @bindings[editor.id] if @bindings[editor.id]?
+    return @bindingsById[editor.id] if @bindingsById[editor.id]?
 
   deactivatePlugin: ->
     return unless @active
 
-    for id,binding of @bindings
-      binding.destroy()
-      delete @bindings[id]
+    binding.destroy() for id,binding of @bindingsById
 
     @active = false
     @editorsSubscription?.dispose()

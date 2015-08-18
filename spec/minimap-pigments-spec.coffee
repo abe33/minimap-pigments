@@ -43,8 +43,11 @@ describe "MinimapPigments", ->
     runs ->
       minimap = minimapPackage.minimapForEditor(editor)
       colorBuffer = pigmentsProject.colorBufferForEditor(editor)
+
+    waitsFor ->
       binding = plugin.bindingForEditor(editor)
 
+    runs ->
       spyOn(minimap, 'decorateMarker').andCallThrough()
 
   describe "with an open editor that have a minimap", ->
@@ -87,3 +90,12 @@ describe "MinimapPigments", ->
         expect(binding.destroy).toHaveBeenCalled()
 
         expect(plugin.bindingForEditor(editor)).toBeUndefined()
+
+    describe 'when the plugin is deactivated', ->
+      beforeEach ->
+        spyOn(binding, 'destroy').andCallThrough()
+
+        plugin.deactivatePlugin()
+
+      it 'removes all the decorations from the minimap', ->
+        expect(binding.destroy).toHaveBeenCalled()
