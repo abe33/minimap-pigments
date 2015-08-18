@@ -1,3 +1,10 @@
+<a name="v0.1.5"></a>
+# v0.1.5 (2015-08-18)
+
+## :memo: Documentation
+
+Add missing keywords and description in `package.json`
+
 <a name="v0.1.4"></a>
 # v0.1.4 (2015-08-18)
 
