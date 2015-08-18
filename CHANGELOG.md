@@ -1,3 +1,10 @@
+<a name="v0.1.4"></a>
+# v0.1.4 (2015-08-18)
+
+## :bug: Bug Fixes
+
+- Fix decorations not destroyed when plugin is deactivated ([a45c9aae](https://github.com/abe33/minimap-pigments/commit/a45c9aaef130d3285ecf10cc2b5d178f22fd9a6b))
+
 <a name="v0.1.3"></a>
 # v0.1.3 (2015-08-05)
 
