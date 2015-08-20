@@ -1,3 +1,10 @@
+<a name="v0.1.6"></a>
+# v0.1.6 (2015-08-20)
+
+## :bug: Bug Fixes
+
+- Fix error raised if the subscription for a binding was already disposed ([59978722](https://github.com/abe33/minimap-pigments/commit/59978722e365e80fcff5b13c589d7433b97dfbad), [#1](https://github.com/abe33/minimap-pigments/issues/1))
+
 <a name="v0.1.5"></a>
 # v0.1.5 (2015-08-18)
 
