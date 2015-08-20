@@ -42,7 +42,7 @@ module.exports =
       @bindingsById[editor.id] = binding
 
       @subscriptionsById[editor.id] = editor.onDidDestroy =>
-        @subscriptionsById[editor.id].dispose()
+        @subscriptionsById[editor.id]?.dispose()
         binding.destroy()
         delete @subscriptionsById[editor.id]
         delete @bindingsById[editor.id]
