@@ -1,3 +1,10 @@
+<a name="v0.1.7"></a>
+# v0.1.7 (2015-10-05)
+
+## :bug: Bug Fixes
+
+- Prevent errors raised when destroying decorations ([8ce5b2bf](https://github.com/abe33/minimap-pigments/commit/8ce5b2bf74b676f9481cb01e07130121752329ee), [#2](https://github.com/abe33/minimap-pigments/issues/2))
+
 <a name="v0.1.6"></a>
 # v0.1.6 (2015-08-20)
 
