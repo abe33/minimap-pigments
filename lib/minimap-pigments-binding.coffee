@@ -40,8 +40,8 @@ class MinimapPigmentsBinding
     @subscriptions.dispose()
 
   destroyDecorations: ->
-    sub.dispose() for id,sub of @subscriptionsByMarkerId
-    decoration.destroy() for id,decoration of @decorationsByMarkerId
+    sub?.dispose() for id,sub of @subscriptionsByMarkerId
+    decoration?.destroy() for id,decoration of @decorationsByMarkerId
 
     @decorationsByMarkerId = {}
     @subscriptionsByMarkerId = {}
