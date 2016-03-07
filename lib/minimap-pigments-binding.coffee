@@ -25,7 +25,7 @@ class MinimapPigmentsBinding
       @decorationsByMarkerId[m.id]?.destroy()
 
     for m in markers when m.color?.isValid() and m not in @displayedMarkers
-      decoration = @minimap.decorateMarker(m.marker, type: 'highlight', color: m.color.toCSS())
+      decoration = @minimap.decorateMarker(m.marker, type: 'highlight', color: m.color.toCSS(), plugin: 'pigments')
 
       @decorationsByMarkerId[m.id] = decoration
       @subscriptionsByMarkerId[m.id] = decoration.onDidDestroy =>
