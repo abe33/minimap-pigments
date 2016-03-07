@@ -1,3 +1,10 @@
+<a name="v0.2.0"></a>
+# v0.2.0 (2016-03-07)
+
+## :sparkles: Features
+
+- Add plugin origin on created markers ([2994c3dc](https://github.com/abe33/minimap-pigments/commit/2994c3dc28601b438dbf3e2ee5e40e9b6fb0f8eb))
+
 <a name="v0.1.7"></a>
 # v0.1.7 (2015-10-05)
 
