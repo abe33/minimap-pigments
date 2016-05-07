@@ -1,3 +1,10 @@
+<a name="v0.2.1"></a>
+# v0.2.1 (2016-05-07)
+
+## :bug: Bug Fixes
+
+- Fix deprecations with master Atom ([6544cb37](https://github.com/abe33/minimap-pigments/commit/6544cb37aff43eb6232b36d791e10b3a90e9e48e))
+
 <a name="v0.2.0"></a>
 # v0.2.0 (2016-03-07)
 
