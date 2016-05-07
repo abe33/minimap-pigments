@@ -11,8 +11,13 @@ class MinimapPigmentsBinding
 
     @colorBuffer.initialize().then => @updateMarkers()
 
-    @subscriptions.add @colorBuffer.editor.displayBuffer.onDidTokenize =>
-      @updateMarkers()
+    if @colorBuffer.editor.onDidTokenize?
+      @subscriptions.add @colorBuffer.editor.onDidTokenize =>
+        @updateMarkers()
+    else
+      @subscriptions.add @colorBuffer.editor.displayBuffer.onDidTokenize =>
+        @updateMarkers()
+
     @subscriptions.add @colorBuffer.onDidUpdateColorMarkers =>
       @updateMarkers()
 
