@@ -17,7 +17,7 @@ module.exports =
   consumePigmentsServiceV1: (@pigments) ->
     @subscriptions.add @pigments.getProject().onDidDestroy => @pigments = null
 
-    @initialize() if @minimap? and @active
+    @initializeBindings() if @minimap? and @active
 
   deactivate: ->
     @subscriptions.dispose()
@@ -31,9 +31,9 @@ module.exports =
 
     @active = true
 
-    @initialize() if @pigments?
+    @initializeBindings() if @pigments?
 
-  initialize: ->
+  initializeBindings: ->
     @editorsSubscription = @pigments.observeColorBuffers (colorBuffer) =>
       editor = colorBuffer.editor
       minimap = @minimap.minimapForEditor(editor)
