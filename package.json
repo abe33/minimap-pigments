@@ -1,7 +1,7 @@
 {
   "name": "minimap-pigments",
   "main": "./lib/minimap-pigments",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "An Atom plugin to display pigments colors in the Minimap.",
   "repository": "https://github.com/abe33/minimap-pigments",
   "license": "MIT",
