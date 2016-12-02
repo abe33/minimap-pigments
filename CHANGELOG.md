@@ -1,3 +1,10 @@
+<a name="v0.2.2"></a>
+# v0.2.2 (2016-12-02)
+
+## :bug: Bug Fixes
+
+- Fix initialize now being a reserved package method ([f78ed887](https://github.com/abe33/minimap-pigments/commit/f78ed88763d3c4ff13cdad872d5f93709bf58428))
+
 <a name="v0.2.1"></a>
 # v0.2.1 (2016-05-07)
 
