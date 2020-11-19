@@ -21,7 +21,7 @@ module.exports =
 
   deactivate: ->
     @subscriptions.dispose()
-    @editorsSubscription.dispose()
+    @editorsSubscription?.dispose()
     @minimap.unregisterPlugin 'pigments'
     @minimap = null
     @pigments = null
